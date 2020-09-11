@@ -10,3 +10,7 @@ export interface SampleRootObject {
         roman: string;
     };
 }
+
+export type RootData = {
+    rooter: string;
+}

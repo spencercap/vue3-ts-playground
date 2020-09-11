@@ -28,13 +28,12 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-// import App from "./App.vue";
 
 // components
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
 // types
-import { SampleRootObject } from "@/typings/types.ts";
+import { RootData, SampleRootObject } from "@/typings/types.ts";
 
 export default defineComponent({
 	// const Garden = defineComponent({
@@ -67,8 +66,17 @@ export default defineComponent({
 		rootVal(): string {
 			// return "obvi this works";
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			return (this.$root?.$data as any).rooter;
+			// return (this.$root?.$data as any).rooter;
+			return (this.$root?.$data as RootData).rooter;
 		},
+		// another option
+		// rootVal(): string | undefined {
+		// 	// return "obvi this works";
+		// 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		// 	// return (this.$root?.$data as any).rooter;
+		// 	return (this.$root?.$data as undefined | RootData)?.rooter;
+		// },
+
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		rootObj(): SampleRootObject {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
