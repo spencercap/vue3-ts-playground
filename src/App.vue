@@ -33,7 +33,8 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-export default defineComponent({
+// export default defineComponent({
+const App = defineComponent({
 	name: "App",
 	data() {
 		return {
@@ -49,4 +50,5 @@ export default defineComponent({
 		};
 	},
 });
+export default App;
 </script>

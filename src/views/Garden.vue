@@ -17,6 +17,11 @@
 		rootObj:
 		{{ rootObj }}
 
+		<br />
+		<br />
+		three3:
+		{{ three3 }}
+
 		<!-- <HelloWorld msg="nested comp test" /> -->
 	</div>
 </template>
@@ -58,6 +63,13 @@ export default defineComponent({
 		rootObj(): any {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			return (this.$root?.$data as any).rootObj;
+		},
+
+		three3(): string | undefined {
+			// return (this.$root as any).rootObj.three.roman; // $root.val works OR $root.$data.val
+			// return (this.$root as any).rootObj3?.three?.roman || "nope"; // testing nonexistant $root data grab, gets undefined
+			// return (this.$root as any).rootObj3?.three?.roman;
+			return (this.$root as any).rootObj?.three?.roman;
 		},
 	},
 	watch: {

@@ -9,4 +9,6 @@ import router from './router'
 //     }
 // };
 
+// App.extends
+
 createApp(App).use(router).mount('#app')
