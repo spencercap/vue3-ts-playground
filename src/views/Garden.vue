@@ -28,9 +28,16 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+// import App from "./App.vue";
+
+// components
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
+// types
+import { SampleRootObject } from "@/typings/types.ts";
+
 export default defineComponent({
+	// const Garden = defineComponent({
 	name: "Garden",
 	components: {
 		// eslint-disable-next-line vue/no-unused-components
@@ -51,7 +58,10 @@ export default defineComponent({
 		const aRootVal = (this.$root?.$data as any).rooter;
 		console.log("aRootVal:", aRootVal);
 
-		// TODO try importing $root type
+		const num = this.rootObj.one;
+		console.log(num);
+		// type checking works! -- warns about settings type number to type string
+		// this.rootObj.one = 'one';
 	},
 	computed: {
 		rootVal(): string {
@@ -60,15 +70,19 @@ export default defineComponent({
 			return (this.$root?.$data as any).rooter;
 		},
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		rootObj(): any {
+		rootObj(): SampleRootObject {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			return (this.$root?.$data as any).rootObj;
+			// return (this.$root?.$data as any).rootObj as SampleRootObject;
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			return (this.$root as any).rootObj;
+			// return this.$root?.$data?.rootObj; // how to get type correctly?
 		},
 
 		three3(): string | undefined {
 			// return (this.$root as any).rootObj.three.roman; // $root.val works OR $root.$data.val
 			// return (this.$root as any).rootObj3?.three?.roman || "nope"; // testing nonexistant $root data grab, gets undefined
 			// return (this.$root as any).rootObj3?.three?.roman;
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			return (this.$root as any).rootObj?.three?.roman;
 		},
 	},
@@ -85,4 +99,6 @@ export default defineComponent({
 		},
 	},
 });
+
+// export default Garden;
 </script>
