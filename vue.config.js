@@ -7,7 +7,7 @@ module.exports = {
 			port: 7777,
 			hot: true,
 			liveReload: true,
-			lintOnSave: true,
+			// lintOnSave: true, // let VSCode do this according to eslint settings in package.json
 
 			// for Open in Editor function:
 			before(app) {
