@@ -1,0 +1,49 @@
+{
+	// GLOBALS
+	"editor.tabSize": 4, // tab size for all files
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"files.trimTrailingWhitespace": true,
+	//
+
+	// ESLint
+	"eslint.format.enable": true,
+	"eslint.alwaysShowStatus": true,
+	"eslint.validate": [
+		"javascript",
+		"typescript",
+		"vue"
+	],
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true
+	},
+	"eslint.debug": true,
+	//
+
+	// Vetur
+	"vetur.format.defaultFormatter.html": "js-beautify-html",
+	"vetur.format.defaultFormatter.js": "vscode-typescript",
+	"vetur.format.defaultFormatter.ts": "vscode-typescript",
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"[vue]": {
+		"editor.defaultFormatter": "octref.vetur",
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features",
+		// "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features",
+	},
+	"vetur.format.options.useTabs": true,
+	"vetur.validation.interpolation": false,
+	"vetur.experimental.templateInterpolationService": true,
+	"vetur.validation.templateProps": true,
+	//
+
+	// Turbo log settings
+	"turboConsoleLog.quote": "'",
+	"turboConsoleLog.logMessagePrefix": "[T-LOG]",
+	//
+
+}

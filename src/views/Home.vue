@@ -4,7 +4,13 @@
 			alt="Vue logo"
 			src="../assets/logo.png"
 		>
-		<HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+
+		<!-- <hello-world msg="Welcome to Your Vue.js + TypeScript App" /> -->
+		<hello-world
+			msg="Welcome to Your Vue.js + TypeScript App"
+			prop-two="boop"
+		/>
+
 		<div>
 			data:
 			{{ hello }}
