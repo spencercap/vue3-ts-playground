@@ -31,20 +31,20 @@
 </style>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 // export default defineComponent({
 const App = defineComponent({
-	name: "App",
+	name: 'App',
 	data() {
 		return {
-			rooter: "some root data",
+			rooter: 'some root data',
 			rootObj: {
 				one: 1,
 				two: 2,
 				three: {
 					number: 3,
-					roman: "iii",
+					roman: 'iii',
 				},
 			},
 		};

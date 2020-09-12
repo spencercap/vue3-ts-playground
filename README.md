@@ -20,6 +20,41 @@ npm run build
 npm run lint
 ```
 
+### ESLint, TSLint, Prettier and Vetur
+- TSLint: helps VSCode?
+
+
+- ESLint: for vue-cli-service + compiler?
+
+
+- VSCode + ESLint:
+
+(better approach for format on Save)
+```
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+```
+
+
+- VSCode + Prettier (dont do this way...): in `settings.json` turn on:
+
+(helps w format on Save)
+```
+    "vetur.format.defaultFormatterOptions": {
+        "prettier": {
+            "singleQuote": true,
+            "useTabs": true,
+            "semi": true
+        }
+    },
+```
+
+
+- Vetur: see settings.json
+
+
+
 ### Vue Dev Tools
 these can be super help
 

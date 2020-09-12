@@ -27,17 +27,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 // components
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 // types
-import { RootData, SampleRootObject } from "@/typings/types.ts";
+import { RootData, SampleRootObject } from '@/typings/types.ts';
 
 export default defineComponent({
 	// const Garden = defineComponent({
-	name: "Garden",
+	name: 'Garden',
 	components: {
 		// eslint-disable-next-line vue/no-unused-components
 		HelloWorld,
@@ -45,17 +45,17 @@ export default defineComponent({
 	},
 	data() {
 		return {
-			flowers: "fresh",
+			flowers: 'fresh',
 		};
 	},
 	mounted() {
-		console.log("Garden mounted");
+		console.log('Garden mounted');
 
 		// const aRootVal = this.$root?.rooter; // works but compile err
 		// const aRootVal = this.$root?.$data.rooter; // also works but compile err
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const aRootVal = (this.$root?.$data as any).rooter;
-		console.log("aRootVal:", aRootVal);
+		console.log('aRootVal:', aRootVal);
 
 		const num = this.rootObj.one;
 		console.log(num);
@@ -98,9 +98,9 @@ export default defineComponent({
 		rootVal: {
 			handler(newRootVal: string, oldRootVal: undefined | string) {
 				console.log(
-					"[T-LOG]: handler -> newRootVal:",
+					'[T-LOG]: handler -> newRootVal:',
 					newRootVal,
-					"// oldRootVal:",
+					'// oldRootVal:',
 					oldRootVal
 				);
 			},
