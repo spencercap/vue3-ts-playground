@@ -62,6 +62,9 @@ export default defineComponent({
 		// console.log(num);
 		// type checking works! -- warns about settings type number to type string
 		// this.rootObj.one = 'one';
+
+		// updating component data on the fly (chrome dev tools)
+		// $0.__vueParentComponent.data.flowers = 'update to comp data from chrome dev tools';
 	},
 	computed: {
 		rootVal(): string {
