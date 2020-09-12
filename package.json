@@ -47,13 +47,13 @@
 				"single"
 			],
 			"indent": [
-                "warn",
-                "tab"
-            ],
-            "semi": [
-                "warn",
-                "always"
-            ]
+				"warn",
+				"tab"
+			],
+			"semi": [
+				"warn",
+				"always"
+			]
 		}
 	},
 	"browserslist": [

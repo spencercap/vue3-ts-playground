@@ -31,9 +31,9 @@ npm run lint
 
 (better approach for format on Save)
 ```
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true
+	},
 ```
 
 
@@ -41,13 +41,13 @@ npm run lint
 
 (helps w format on Save)
 ```
-    "vetur.format.defaultFormatterOptions": {
-        "prettier": {
-            "singleQuote": true,
-            "useTabs": true,
-            "semi": true
-        }
-    },
+	"vetur.format.defaultFormatterOptions": {
+		"prettier": {
+			"singleQuote": true,
+			"useTabs": true,
+			"semi": true
+		}
+	},
 ```
 
 
