@@ -57,8 +57,9 @@ export default defineComponent({
 		const aRootVal = (this.$root?.$data as any).rooter;
 		console.log('aRootVal:', aRootVal);
 
-		const num = this.rootObj.one;
-		console.log(num);
+		// YES, rootObj computed var IS avail on mounted
+		// const num = this.rootObj.one;
+		// console.log(num);
 		// type checking works! -- warns about settings type number to type string
 		// this.rootObj.one = 'one';
 	},
