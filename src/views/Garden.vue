@@ -22,15 +22,18 @@
 		three3:
 		{{ three3 }}
 
-		<!-- <HelloWorld msg="nested comp test" /> -->
+		<HelloWorld
+			msg="nested comp test"
+			:prop-two="'this is prop two'"
+		/>
 	</div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, defineAsyncComponent } from 'vue';
 
 // components
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+// import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 // types
 import { RootData, SampleRootObject } from '@/typings/types.ts';
@@ -40,8 +43,9 @@ export default defineComponent({
 	name: 'Garden',
 	components: {
 		// eslint-disable-next-line vue/no-unused-components
-		HelloWorld,
-		// HelloWorld: () => import("../components/HelloWorld.vue"), // dynamic imports dont work in components
+		// HelloWorld,
+		// eslint-disable-next-line vue/no-unused-components
+		HelloWorld: defineAsyncComponent(() => import('../components/HelloWorld.vue'))
 	},
 	data() {
 		return {
